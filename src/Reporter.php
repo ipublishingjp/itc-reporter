@@ -275,7 +275,10 @@ class Reporter
         } catch (\Exception $e) {
             return Result::fail(
                 Result::ERROR,
-                $e->getMessage()
+                $e->getMessage(),
+                [],
+                [],
+                $e
             );
         }
     }
