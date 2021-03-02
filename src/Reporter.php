@@ -24,7 +24,8 @@ class Reporter
         'Sales.getReport'              => '\Snscripts\ITCReporter\Responses\SalesGetReport',
         'Finance.getAccounts'          => '\Snscripts\ITCReporter\Responses\FinanceGetAccounts',
         'Finance.getVendorsAndRegions' => '\Snscripts\ITCReporter\Responses\FinanceGetVendors',
-        'Finance.getReport'            => '\Snscripts\ITCReporter\Responses\FinanceGetReport'
+        'Finance.getReport'            => '\Snscripts\ITCReporter\Responses\FinanceGetReport',
+        'Error'                        => '\Snscripts\ITCReporter\Responses\Error',
     ];
     protected $lastResult = null;
 
@@ -305,6 +306,18 @@ class Reporter
         );
 
         return $ResponseProcesser->process();
+    }
+
+    /**
+     * @param Psr\Http\Message\ResponseInterface $Response
+     * @return array
+     */
+    public function processErrorResponse(ResponseInterface $Response)
+    {
+        return $this->processResponse(
+            'Error',
+            $Response
+        );
     }
 
     /**
