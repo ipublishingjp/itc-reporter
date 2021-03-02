@@ -5,7 +5,7 @@ use Snscripts\ITCReporter\Reporter;
 use Snscripts\Result\Result;
 use GuzzleHttp\Client;
 
-class ReporterTest extends \PHPUnit_Framework_TestCase
+class ReporterTest extends \PHPUnit\Framework\TestCase
 {
     public function testCanCreateInstance()
     {

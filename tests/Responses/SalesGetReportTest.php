@@ -3,11 +3,11 @@ namespace Snscripts\ITCReporter\Tests\Responses;
 
 use Snscripts\ITCReporter\Responses\SalesGetReport;
 
-class SalesGetReportTest extends \PHPUnit_Framework_TestCase
+class SalesGetReportTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    protected function setUp(): void
     {
-
+        parent::setUp();
     }
 
     public function testProcessReturnsReportInArrayFormat()
