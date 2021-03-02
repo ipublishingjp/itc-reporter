@@ -6,6 +6,11 @@ use Psr\Http\Message\ResponseInterface;
 
 class FinanceGetAccounts implements ResponseProcessor
 {
+    /**
+     * @var Psr\Http\Message\ResponseInterface
+     */
+    private $Response;
+
     public function __construct(ResponseInterface $Response)
     {
         $this->Response = $Response;
