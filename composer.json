@@ -9,6 +9,11 @@
             "name": "Mike Barlow",
             "email": "mike@mikebarlow.co.uk",
             "role": "Developer"
+        },
+        {
+            "name": "Yukimune Takagi",
+            "email": "takagi@ipublishing.jp",
+            "role": "Developer"
         }
     ],
     "repositories": [
@@ -20,8 +25,9 @@
     ],
     "require": {
         "php": ">=7.2.0",
-        "guzzlehttp/guzzle": "7.*",
-        "snscripts/result": "1.0.*"
+        "ext-simplexml": "*",
+        "guzzlehttp/guzzle": "6.*",
+        "snscripts/result": "dev-master",
     },
     "require-dev": {
         "phpunit/phpunit": "~8.0",
