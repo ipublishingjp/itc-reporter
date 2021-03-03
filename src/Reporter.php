@@ -277,7 +277,7 @@ class Reporter
             return Result::fail(
                 Result::ERROR,
                 $e->getMessage(),
-                [],
+                [$e],
                 [],
                 $e
             );
